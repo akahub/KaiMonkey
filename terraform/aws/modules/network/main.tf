@@ -172,7 +172,7 @@ resource "aws_lb_target_group" "km_lb_target" {
 resource "aws_lb_listener" "km_frontend_listener" {
   load_balancer_arn = aws_lb.km_lb.arn
   port              = "80"
-  protocol          = "HTTP"
+  protocol          = "HTTPS"
   default_action {
     target_group_arn = aws_lb_target_group.km_lb_target.arn
     type             = "forward"
